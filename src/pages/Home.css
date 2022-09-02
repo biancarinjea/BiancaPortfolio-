@@ -1,0 +1,149 @@
+.logo{
+    width: 20%;
+    height: 100%;
+}
+.start-container {
+    box-shadow: none;
+    border-radius: 0;
+    display: flex;
+    margin: 1em 5em 1em;
+    align-items: center;
+    justify-content: center;
+}
+
+.start-headline {
+    font-family: PermanentMarker, sans-serif;
+    font-size: 2.5em;
+    color: var( --ion-color-primary-text);
+}
+.start-text {
+    font-family: Open Sans, sans-serif;
+    font-size: 1.25em;
+    font-weight: 200;
+    color: var( --ion-color-primary-text);
+    padding: 1em 0;
+}
+.user-info-text {
+    width: 50%;
+    height: 30%;
+}
+.butonul1{
+      margin-left: 3vh !important;
+}
+.title1{
+    font-family: 'Khula';
+    font-style: normal;
+    font-weight: 600;
+    font-size:2vw !important;
+    text-align: center;
+}
+.top10vh{
+    margin-top: 10vh;
+}
+.top5vh{
+    margin-top:5vh;
+}
+.subtitle1{
+    font-family: 'Khula';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1vw !important;
+    text-align: center;
+}
+.title1{
+    font-family: 'Khula';
+    font-style: normal;
+    font-weight: 600;
+    font-size:2vw !important;
+    text-align: center;
+}
+.centerText{
+        justify-content: center;
+        text-align: center;
+}
+.container{
+    width: 40%;
+    height: 400px;
+}
+.container4{
+    width: 50%;
+    height: 300px;
+}
+.container2{
+    width: 30%;
+    height: 300px;
+}
+.container3{
+    width: 60%;
+}
+.container1{
+    width: 50%;
+}
+.margLeft5vh{
+    margin-left: 5vh;
+}
+.bck1{
+    border-radius: 25px;
+    border: 2px solid #E7C9A7;
+    width: 95%;
+}
+.bck2{
+    border-radius: 25px;
+    border: 2px solid #E7C9A7;
+    width: 35%;
+}
+.bck{
+    border-radius: 8px 100px / 100px 30px;
+    border-width:thin;
+    border-color: #E7C9A7;
+    border-style: solid;
+}
+hr.solid{
+    border: 0;
+     border-top: 2px solid #E7C9A7;
+     margin-left: 15%;
+     margin-right: 15%;
+}
+.img{
+    width: 50px;
+    height: 50px;
+}
+.imgRectangle{
+    width: 100%;
+    scale: 2;
+}
+.imgRectangle1{
+    width: 100%;
+    scale: 1.1;
+}
+.centerImg{
+    display: flex;
+    justify-content: center;
+}
+.top7vh{
+    margin-top: 7vh;
+}
+
+.btn{
+    width: 70%;
+}
+.full{
+    width: 100%;
+}
+.contactUsText{
+    font-family: 'Karma';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 52px;
+}
+.hidden{
+    display: none;
+}
+.leftAlign{
+    text-align: left;
+    justify-content: left;
+}
+.top20vh{
+    margin-top: 20vh;
+}
