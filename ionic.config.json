@@ -1,0 +1,7 @@
+{
+  "name": "dfbb_company",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
