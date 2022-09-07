@@ -23,6 +23,7 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import { Menu } from './components/Menu';
 import ContactUs from './pages/ContactUs';
+import AboutUs from './pages/AboutUs';
 setupIonicReact();
 
 const App = () => (
@@ -33,6 +34,7 @@ const App = () => (
         <Route path="/home" component={Home} exact={true} />
         <Route exact path="/" render={() => <Redirect to="/home" />} />
         <Route path="/contact" component={ContactUs} exact={true}/>
+        <Route path="/aboutUs" component={AboutUs} exact={true}/>
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
