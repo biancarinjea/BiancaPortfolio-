@@ -1,0 +1,24 @@
+.calculatorTitle{
+    font-family: 'Karma';
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(2rem, 2vw, 3rem);
+    line-height: 78px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+.containerTitle{
+    width: 100%;
+}
+.calculatorSubtitle{
+    font-family: 'Karma';
+    font-style: normal;
+    font-weight: 300;
+    font-size: clamp(1rem, 1.2vw, 2rem);
+    line-height: 35px;
+    text-align: center;
+}
+.alignCenter{
+    margin: auto;
+}
