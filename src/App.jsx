@@ -25,6 +25,7 @@ import { Menu } from './components/Menu';
 import ContactUs from './pages/ContactUs';
 import AboutUs from './pages/AboutUs';
 import Calculator from './pages/Calculator';
+import CalculatorFinal from './pages/CalculatorFinal';
 setupIonicReact();
 
 const App = () => (
@@ -37,6 +38,7 @@ const App = () => (
         <Route path="/contact" component={ContactUs} exact={true}/>
         <Route path="/aboutUs" component={AboutUs} exact={true}/>
         <Route path="/calculator" component={Calculator} exact={true}/>
+        <Route path="/calculatorFinal" component={CalculatorFinal}/>
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
