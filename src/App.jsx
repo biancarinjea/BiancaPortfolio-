@@ -26,6 +26,7 @@ import ContactUs from './pages/ContactUs';
 import AboutUs from './pages/AboutUs';
 import Calculator from './pages/Calculator';
 import CalculatorFinal from './pages/CalculatorFinal';
+import SendSuccessful from './pages/SendSuccessful';
 setupIonicReact();
 
 const App = () => (
@@ -39,6 +40,7 @@ const App = () => (
         <Route path="/aboutUs" component={AboutUs} exact={true}/>
         <Route path="/calculator" component={Calculator} exact={true}/>
         <Route path="/calculatorFinal" component={CalculatorFinal}/>
+        <Route path="/sendSuccessful" component={SendSuccessful}/>  
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>

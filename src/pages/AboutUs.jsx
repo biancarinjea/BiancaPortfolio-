@@ -10,8 +10,68 @@ import AboutUsRectangle from '../images/AboutUsRectangle.svg';
 import CustomButton from '../components/CustomButton';
 import email from '../images/emailLogo.svg'
 import AboutUsRectangleBottom from '../images/AboutUsRectangleBottom.svg';
+import { useHistory } from "react-router-dom";
+import axios from 'axios';
+import { useState, useEffect } from "react";
+
 var test=true
 const AboutUs  = () => {
+  const [name, setName] = useState("");
+  const [email1, setEmail] = useState("");
+  const [phone,setPhone] = useState("");
+  const [messageTitle,setMessageTitle] = useState("");
+  const [message,setMessage] = useState("");
+  const [nameError,setNameError] = useState("");
+  const [emailError,setEmailError] = useState("");
+  const [phoneError,setPhoneError] = useState("");
+  const [messageTitleError,setMessageTitleError] = useState("");
+  const [messageError,setMessageError] = useState("");
+  const history = useHistory()
+  async function sendMessage(){
+    console.log(name)
+    const client = {
+        name: name,
+        email: email1,
+        phoneNumber:phone,
+        messageTitle:messageTitle,
+        message:message
+    }
+    if(!client.name){
+        setNameError("Name is required");
+    }else{
+        setNameError("");
+    }
+    if(!client.phoneNumber){
+        setPhoneError("Phone is required");
+    }else{
+        setPhoneError("");
+    }
+    if(!client.email){
+        setEmailError("Email is required");
+    }else{
+        setEmailError("");
+    }
+    if(!client.messageTitle){
+        setMessageTitleError("Message Title is required");
+    }else{
+        setMessageTitleError("");
+    }
+    if(!client.message){
+        setMessageError("Message is required");
+    }else{
+        setMessageError("");
+    }
+    if(client.name && client.email && client.phoneNumber && client.messageTitle && client.message){
+      await axios.post('http://localhost:3000/clients/save',client)
+      .then((res) => {
+          console.log(res.data);
+          if(res.status == 200)
+          history.replace('/sendSuccessful');
+      }).catch((error) => {
+          console.log(error)
+      });
+    }
+  }
   return (
     <IonPage>
       <IonHeader>
@@ -71,38 +131,63 @@ const AboutUs  = () => {
               <div>
                 <IonItem>
                   <IonLabel position="floating">Name</IonLabel>
-                  <IonInput></IonInput>
+                  <IonInput
+                   required
+                   onIonChange={(e)=>setName(e.target.value)}
+                  ></IonInput>
                 </IonItem>
+                <IonLabel color="danger">{nameError}</IonLabel>
               </div>
               <div className='margLeft5vh'>
                 <IonItem>
                   <IonLabel position="floating">Email</IonLabel>
-                  <IonInput></IonInput>
+                  <IonInput
+                   required
+                   type='email'
+                   onIonChange={(e)=>setEmail(e.target.value)}
+                  ></IonInput>
                 </IonItem>
+                <IonLabel color="danger">{emailError}</IonLabel>
               </div>
             </div>
             <div className='start-container leftAlign'>
               <div >
                 <IonItem>
                   <IonLabel position="floating">Phone Number</IonLabel>
-                  <IonInput></IonInput>
+                  <IonInput
+                   required
+                   onIonChange={(e)=>setPhone(e.target.value)}
+                  ></IonInput>
                 </IonItem>
+                <IonLabel color="danger">{phoneError}</IonLabel>
               </div>
               <div className='margLeft5vh'>
                 <IonItem>
                   <IonLabel position="floating">Message Title</IonLabel>
-                  <IonInput></IonInput>
+                  <IonInput
+                   required
+                   onIonChange={(e)=>setMessageTitle(e.target.value)}
+                  ></IonInput>
                 </IonItem>
+                <IonLabel color="danger">{messageTitleError}</IonLabel>
               </div>
             </div>
             <div className='start-container'>
-              <IonItem className='full'>
-                <IonLabel position="floating">Description</IonLabel>
-                <IonTextarea rows={5}></IonTextarea>
-              </IonItem>
+              <div className='container5'>
+                <IonItem className='full'>
+                  <IonLabel position="floating">Description</IonLabel>
+                  <IonTextarea rows={5}
+                  required
+                  onIonChange={(e)=>setMessage(e.target.value)}
+                  ></IonTextarea>
+                </IonItem>
+                <IonLabel color="danger">{messageError}</IonLabel>
+              </div>
             </div>
             <div className='start-container  top7vh rightAlign'>
-              <CustomButton text="Send" email={email} className={'leftAlign'}></CustomButton>
+              <CustomButton text="Send" email={email} className={'leftAlign'} onClick={()=>{
+                sendMessage();
+              }}></CustomButton>
             </div>
           </div>
         </div>
