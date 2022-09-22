@@ -28,6 +28,7 @@ import Calculator from './pages/Calculator';
 import CalculatorFinal from './pages/CalculatorFinal';
 import SendSuccessful from './pages/SendSuccessful';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import Work from './pages/Work';
 setupIonicReact();
 
 const App = () => (
@@ -42,8 +43,9 @@ const App = () => (
         <Route path="/calculator" component={Calculator} exact={true}/>
         <Route path="/calculatorFinal" component={CalculatorFinal}/>
         <Route path="/sendSuccessful" component={SendSuccessful}/>  
-        <Route path="/privacyPolicy" component = {PrivacyPolicy}/>
-      </IonRouterOutlet>
+        <Route path="/privacyPolicy" component = {PrivacyPolicy}/> 
+        <Route path="/work" component={Work} exact={true} />
+       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
 );

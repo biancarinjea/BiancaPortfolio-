@@ -1,0 +1,8 @@
+.iconCard{
+    width: 20px;
+    height: 20px;
+}
+.leftAlignMobile{
+    justify-content: left;
+    display: flex;
+}
