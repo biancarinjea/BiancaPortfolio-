@@ -1,0 +1,56 @@
+.start-containerMobile {
+    box-shadow: none;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.start-headlineMobile {
+    font-family: PermanentMarker, sans-serif;
+    font-size:clamp(0.5rem,2.6vw,2rem);
+    color: var( --ion-color-primary-text);
+    text-align: center;
+}
+.start-textMobile{
+    font-family: Open Sans, sans-serif;
+    font-size: clamp(0.1rem,2vw,1rem);
+    color: var( --ion-color-primary-text);
+    padding: 1em 0;
+    text-align: center;
+}
+.imgMobile{
+    width: 30px;
+    height: 30px;
+}
+.imgMobile1{
+    width: 10px;
+    height: 10px;
+}
+.titleMobile{
+    font-family: 'Khula';
+    font-style: normal;
+    font-weight: 600;
+    font-size:5vw !important;
+    text-align: center;
+}
+.titleMobile1{
+    font-family: 'Khula';
+    font-style: normal;
+    font-weight: 600;
+    font-size:2vw !important;
+    text-align: center;
+}
+.subtitleMobile1{
+    font-family: 'Khula';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1vw !important;
+    text-align: center;
+}
+.containerMobile{
+    width: 40%;
+}
+.containerMobile1{
+    width: 40%;
+    padding: 20px;
+}
