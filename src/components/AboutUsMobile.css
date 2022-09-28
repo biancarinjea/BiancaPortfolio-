@@ -1,0 +1,80 @@
+.cardMobile{
+    float: right;
+    width: clamp(200px, 52%, 600px);  
+    margin-top: clamp(5vw, 5vw, 10vw);
+}
+.top5vh{
+    margin-top: 5vh !important;
+}
+.top2vw{
+    margin-top: 2vw !important;
+}
+.top10vh{
+    margin-top: clamp(25vw, 10vw, 35vw);
+}
+.aboutUsTitleMobile{
+    font-family: 'Khula';
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    text-align: center;
+    margin-left: clamp(5vw, 5vw, 10vw);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.aboutUsTitleMobile1{
+    display: flex;
+    justify-content: center;
+    font-family: 'Khula';
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+    text-align: center;
+    color: #232222;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.aboutUsSubtitleMobile{
+    font-family: 'Khula';
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(0.5rem, 1vw, 1rem);
+    margin-left:clamp(5vw, 5vw, 10vw);
+    text-align: center;
+}
+.aboutUsSubtitleMobile1{
+    display: flex;
+    justify-content: center;
+    font-family: 'Khula';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1vw !important;
+    color: #232222;
+}
+.marg24vw{
+    height: 24vw !important;
+}
+.margLeftButton{
+    margin-left:clamp(5vw, 5vw, 10vw);
+}
+.rightAlign{
+    text-align: right;
+    justify-content: right;
+}
+.bck5{
+    background-color: blue;
+}
+.bck6{
+    background-color: red;
+}
+.start-containerMobile1{
+    box-shadow: none;
+    border-radius: 0;
+    display: flex;
+    margin: 1em 5em 1em;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 85%;
+}
+.scaleImg{
+    scale:1.5
+}
