@@ -1,0 +1,69 @@
+.contactUsTitle{
+    font-family: 'Khula';
+    font-style: normal;
+    font-weight: 800;
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.contactUsSubtitle1{    
+    font-family: 'Khula';
+    font-style: normal;
+    line-height: 50px;
+    font-weight: 300;
+    font-size: clamp(1rem, 2vw, 2rem);
+}
+.contactUsTitle1{
+    font-family: 'Khula';
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.contactUsText{
+    font-family: 'Karma';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 50px;
+    /* or 167% */
+    text-align: left;
+}
+.contactUsBtn1{
+    text-align: center;
+    margin-top: 1vw !important;
+}
+.marginLeft{
+    margin-left: 6vw;
+}
+.top10vh{
+    margin-top: 10vh !important;
+}
+.top1vw{
+    margin-top: 1vw !important;
+}
+.top20vh{
+    margin-top: 20vh !important;
+}
+.alignRight{
+    display: flex;
+    justify-content: right;
+}
+.contactUsSubtitle{
+    font-family: 'Khula';
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+    font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+}
+.icon{
+    width: 50px;
+    height: 50px;
+}
+.alignLeft{
+    display: flex;
+    justify-content: left;
+}
+.container5{
+    width: 100%;
+}
