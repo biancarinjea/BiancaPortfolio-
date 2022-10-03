@@ -1,7 +1,9 @@
 import { IonButton, IonMenuButton } from "@ionic/react";
 import React, { useEffect } from "react";
+import { useHistory } from "react-router-dom";
 
 export const NavButtons = () => {
+  const history = useHistory()
   const [mQuery, setMQuery] = React.useState({
     matches: window.innerWidth > 768 ? true : false,
   });
@@ -22,7 +24,6 @@ export const NavButtons = () => {
         <IonMenuButton />
       ) : (
         <>
-          <IonButton routerLink={"/home"}>Home </IonButton>
           <IonButton routerLink={"/work"}>Work </IonButton>
           <IonButton routerLink={"/aboutUs"}>About Us</IonButton>
           <IonButton routerLink={"/contact"}>Contact</IonButton>

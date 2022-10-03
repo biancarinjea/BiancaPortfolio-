@@ -1,4 +1,4 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar,IonButtons, IonImg, IonGrid, IonCol, IonLabel, IonRow, IonButton, IonIcon, IonList,IonItem,IonInput,IonTextarea,IonItemDivider } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar,IonButtons, IonImg, IonGrid, IonCol, IonLabel, IonRow, IonButton, IonIcon, IonList,IonItem,IonInput,IonTextarea,IonItemDivider,IonCheckbox } from '@ionic/react';
 import { NavButtons } from '../components/NavButtons';
 import './HomeDesktop.css';
 import email from '../images/emailLogo.svg'
@@ -81,14 +81,18 @@ const HomeDesktop = () =>{
       }
     }
     return(
-        <>
+        <IonContent scrollEvents={true}>
              <div className="start-container">
           <div>
             <h2 className="start-headline">Hello! We create websites<br></br> and mobile applications</h2>
             <p className="start-text">At DFBB, we believe in quality design with a significant impact on<br></br> the business side, which benefits both the company and the users.<br></br> Thus, we help our clients grow and differentiate themselves from<br></br> the competition.</p>
             <div>
-                <CustomButton text="Let's Talk" email={email} className={''}></CustomButton>
-                <CustomButton text="Portfolio" email={email} className={'butonul1'}></CustomButton>
+                <CustomButton text="Let's Talk" email={email} className={''} onClick={()=>{
+                  history.push('/contact')
+                }}></CustomButton>
+                <CustomButton text="Portfolio" email={email} className={'butonul1'} onClick={()=>{
+                  history.push('/work')
+                }}></CustomButton>
             </div>
           </div>
           <div className='user-info-text'>
@@ -214,24 +218,27 @@ const HomeDesktop = () =>{
           </div>
         </div>
         <div className='start-container top10vh'>
-          <div className='container'>
+          <div className='container bck2'>
             <div className='centerImg'>
               <IonImg src={Audit} className='img'></IonImg>
             </div>
+
             <div className='centerText top5vh'>
               <IonLabel className='title1'>Consulting</IonLabel>
             </div>
+            <hr class="solid"></hr>
             <div className='centerText top5vh'>
               <IonLabel className='subtitle1'>Along with your project, we also offer<br></br> consulting on the important aspects<br></br> of the project and what can be<br></br> improved.</IonLabel>
             </div>
           </div>
-          <div className='container'>
+          <div className='container bck2 margLeft5vh'>
             <div className='centerImg'>
               <IonImg src={Android} className='img'></IonImg>
             </div>
             <div className='centerText top5vh'>
               <IonLabel className='title1'>App Development</IonLabel>
             </div>
+            <hr class="solid"></hr>
             <div className='centerText top5vh'>
               <IonLabel className='subtitle1'>We develop complete iOS and<br></br> Android applications from scratch<br></br> and design the UI/UX part as well as<br></br> the server-side part.</IonLabel>
             </div>
@@ -251,20 +258,22 @@ const HomeDesktop = () =>{
             </div>
         </div>
         <div className='start-container top10vh'>
-          <div className='container'>
-              <div className='centerText'>
-                <IonLabel className='title1'>What have we delivered?</IonLabel>
-              </div>
-              <div className='centerImg'>
-                <IonImg src={Myproject}></IonImg>
-              </div>
-              <div className='centerText'>
-                <IonLabel className='subtitle1'>Take a look at some of our work below</IonLabel>
-              </div>
-              <div className='start-container'>
-                <IonButton size='small' fill='solid' shape='round' color="warning" className='btn'>See My Portfolio</IonButton>
-              </div>
-          </div>
+          <IonLabel className='title1'>What have we delivered?</IonLabel>
+          
+        </div>
+        <div className='start-container'>
+           <div>
+              <IonImg src={Myproject}></IonImg>
+           </div>
+           <div>
+           <div className='subtitle1'>
+             <IonLabel>You can opt for D.F.B.B services<br></br> whether you're just starting out or<br></br> you've been on the market for<br></br> a long time.<br></br>
+Feel free to browse our online<br></br> portfolio.</IonLabel>
+           </div>
+               <div className='start-container'>
+                  <IonButton size='small' fill='solid' shape='round' color="warning" onClick={()=>{history.push('/work')}}>See My Portfolio</IonButton>
+               </div>
+           </div>
         </div>
         <div className='top10vh'>
           <IonImg src={HomeRectangle3}></IonImg>
@@ -292,8 +301,8 @@ Use the form to contact us. We will try to answer as soon as<br></br> possible. 
             <div className='hidden'>
               <IonLabel className='contactUsText'>Contact Us</IonLabel>
             </div>
-            <div className='start-container top10vh'>
-              <div >
+            <div className='start-containerMobile top10vh'>
+              <div className='container5'>
                 <IonItem>
                   <IonLabel position="floating">Name</IonLabel>
                   <IonInput
@@ -303,7 +312,7 @@ Use the form to contact us. We will try to answer as soon as<br></br> possible. 
                 </IonItem>
                 <IonLabel color="danger">{nameError}</IonLabel>
               </div>
-              <div className='margLeft5vh'>
+              <div className='margLeft5vh container5'>
                 <IonItem>
                   <IonLabel position="floating">Email</IonLabel>
                   <IonInput
@@ -315,8 +324,8 @@ Use the form to contact us. We will try to answer as soon as<br></br> possible. 
                 <IonLabel color="danger">{emailError}</IonLabel>
               </div>
             </div>
-            <div className='start-container'>
-              <div >
+            <div className='start-containerMobile top5vh'>
+              <div className='container5'>
                 <IonItem>
                   <IonLabel position="floating">Phone Number</IonLabel>
                   <IonInput
@@ -326,7 +335,7 @@ Use the form to contact us. We will try to answer as soon as<br></br> possible. 
                 </IonItem>
                 <IonLabel color="danger">{phoneError}</IonLabel>
               </div>
-              <div className='margLeft5vh'>
+              <div className='margLeft5vh container5'>
                 <IonItem>
                   <IonLabel position="floating">Message Title</IonLabel>
                   <IonInput
@@ -337,7 +346,7 @@ Use the form to contact us. We will try to answer as soon as<br></br> possible. 
                 <IonLabel color="danger">{messageTitleError}</IonLabel>
               </div>
             </div>
-            <div className='start-container'>
+            <div className='start-containerMobile top5vh'>
               <div className='container5'>
                 <IonItem className='full'>
                   <IonLabel position="floating">Message</IonLabel>
@@ -347,19 +356,21 @@ Use the form to contact us. We will try to answer as soon as<br></br> possible. 
                   ></IonTextarea>
                 </IonItem>
                 <IonLabel color="danger">{messageError}</IonLabel>
+                <IonItem>
+                                    <IonCheckbox slot="start"></IonCheckbox>
+                                    <IonLabel>I agree with the data processing according to the <a href="/privacyPolicy">Privacy Policy</a></IonLabel>
+                                </IonItem>
               </div>
             </div>
             <div className='start-container  top7vh leftAlign'>
-              <CustomButton text="Send" email={email} className={'leftAlign'} onClick={()=>{
-                                sendMessage()
-                            }}></CustomButton>
+              <CustomButton text="Send" email={email} className={'leftAlign'} onClick={sendMessage}></CustomButton>
             </div>
           </div>
         </div>
         <div className='top20vh'>
           <IonImg src={HomeRectangle1} className='imgRectangle1'></IonImg>
         </div>
-        </>
+        </IonContent>
     )
 }
 export default HomeDesktop;

@@ -77,3 +77,13 @@
 .scaleImg{
     scale:1.5
 }
+.gradientBck{
+    background-image: url('../images/blueGradient.svg');
+    height: 20%;
+}
+.verticalAlign{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}

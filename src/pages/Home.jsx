@@ -1,12 +1,14 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar,IonButtons, IonImg, IonGrid, IonCol, IonLabel, IonRow, IonButton, IonIcon, IonList,IonItem,IonInput,IonTextarea,IonItemDivider } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar,IonButtons, IonImg } from '@ionic/react';
 import { NavButtons } from '../components/NavButtons';
 import './Home.css';
 import logo from '../images/logo.svg'
-import React,{ useState, useEffect } from "react";
+import React,{ useEffect } from "react";
 import HomeDesktop from '../components/HomeDesktop';
 import HomeMobile from '../components/HomeMobile';
+import { useHistory } from "react-router-dom";
 
 const Home = () =>{
+  const history = useHistory()
   const [mQuery, setMQuery] = React.useState({
     matches: window.innerWidth > 768 ? true : false,
   });
@@ -21,7 +23,10 @@ const Home = () =>{
     <IonPage>
        <IonHeader>
         <IonToolbar>
-          <IonImg src={logo} className="logo"></IonImg>
+          <IonImg src={logo} className="logo" onClick={()=>{
+             console.log("test");
+             history.replace('/home');
+          }}></IonImg>
           <IonButtons slot="end">
             <NavButtons/>
           </IonButtons>

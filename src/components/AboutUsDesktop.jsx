@@ -1,4 +1,4 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButtons,IonImg,IonGrid,IonCol,IonRow, IonLabel, IonButton, IonCard,IonItem,IonInput,IonTextarea } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButtons,IonImg,IonGrid,IonCol,IonRow, IonLabel, IonButton, IonCard,IonItem,IonInput,IonTextarea,IonCheckbox } from '@ionic/react';
 import './AboutUsDesktop.css';
 import rightArrow from '../images/rightArrow.svg';
 import Office from '../images/Office.svg';
@@ -69,12 +69,11 @@ const AboutUsDesktop = () =>{
     }
     return(
         <>
+           <div className='gradientBck'>
+                <IonLabel className='centerImg aboutUsTitle verticalAlign'>Hello We are D.F.B.B</IonLabel>
+           </div>
            <div className='start-container'>
           <div className='container'>
-            <div>
-              <IonLabel className='aboutUsTitle'>Hello! We are D.F.B.B</IonLabel>
-            </div>
-            <br></br>
             <div className='aboutUsSubtitle'>
               <IonLabel>About Us</IonLabel>
             </div>
@@ -94,7 +93,7 @@ const AboutUsDesktop = () =>{
           <div className='user-info-text'>
            <IonImg src={Office}></IonImg>
           </div>
-        </div>
+           </div>
         <div>
           <IonImg src={AboutUsRectangle}></IonImg>
         </div>
@@ -111,8 +110,8 @@ const AboutUsDesktop = () =>{
             </div>
           </div>
           <div className='container3'>
-            <div className='top10vh start-container leftAlign'>
-              <div>
+            <div className='top10vh start-containerMobile leftAlign'>
+              <div className='container5'>
                 <IonItem>
                   <IonLabel position="floating">Name</IonLabel>
                   <IonInput
@@ -122,7 +121,7 @@ const AboutUsDesktop = () =>{
                 </IonItem>
                 <IonLabel color="danger">{nameError}</IonLabel>
               </div>
-              <div className='margLeft5vh'>
+              <div className='margLeft5vh container5'>
                 <IonItem>
                   <IonLabel position="floating">Email</IonLabel>
                   <IonInput
@@ -134,8 +133,8 @@ const AboutUsDesktop = () =>{
                 <IonLabel color="danger">{emailError}</IonLabel>
               </div>
             </div>
-            <div className='start-container leftAlign'>
-              <div >
+            <div className='start-containerMobile leftAlign top5vh'>
+              <div className='container5'>
                 <IonItem>
                   <IonLabel position="floating">Phone Number</IonLabel>
                   <IonInput
@@ -145,7 +144,7 @@ const AboutUsDesktop = () =>{
                 </IonItem>
                 <IonLabel color="danger">{phoneError}</IonLabel>
               </div>
-              <div className='margLeft5vh'>
+              <div className='margLeft5vh container5'>
                 <IonItem>
                   <IonLabel position="floating">Message Title</IonLabel>
                   <IonInput
@@ -156,7 +155,7 @@ const AboutUsDesktop = () =>{
                 <IonLabel color="danger">{messageTitleError}</IonLabel>
               </div>
             </div>
-            <div className='start-container'>
+            <div className='start-containerMobile top5vh'>
               <div className='container5'>
                 <IonItem className='full'>
                   <IonLabel position="floating">Description</IonLabel>
@@ -166,6 +165,10 @@ const AboutUsDesktop = () =>{
                   ></IonTextarea>
                 </IonItem>
                 <IonLabel color="danger">{messageError}</IonLabel>
+                <IonItem>
+                                    <IonCheckbox slot="start"></IonCheckbox>
+                                    <IonLabel>I agree with the data processing according to the <a href="/privacyPolicy">Privacy Policy</a></IonLabel>
+                                </IonItem>
               </div>
             </div>
             <div className='start-container  top7vh rightAlign'>

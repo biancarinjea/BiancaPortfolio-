@@ -1,4 +1,4 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButtons,IonImg,IonGrid,IonCol,IonRow, IonLabel, IonButton, IonCard, IonItem, IonInput, IonTextarea } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButtons,IonImg,IonGrid,IonCol,IonRow, IonLabel, IonButton, IonCard, IonItem, IonInput, IonTextarea,IonCheckbox } from '@ionic/react';
 import React from 'react';
 import { useState, useEffect } from "react";
 import './ContactUsDesktop.css';
@@ -146,8 +146,8 @@ const ContactUsDesktop = () => {
                         </div>
                     </div>
                     <div className='container4'>
-                        <div className='top10vh start-container leftAlign'>
-                        <div>
+                        <div className='top10vh start-containerMobile leftAlign'>
+                        <div className='container5'>
                             <IonItem>
                                 <IonLabel position="floating">Name</IonLabel>
                                 <IonInput
@@ -157,7 +157,7 @@ const ContactUsDesktop = () => {
                             </IonItem>
                             <IonLabel color="danger">{nameError}</IonLabel>
                         </div>
-                        <div className='margLeft5vh'>
+                        <div className='margLeft5vh container5'>
                             <IonItem>
                             <IonLabel position="floating">Email</IonLabel>
                             <IonInput
@@ -169,8 +169,8 @@ const ContactUsDesktop = () => {
                             <IonLabel color="danger">{emailError}</IonLabel>
                         </div>
                         </div>
-                        <div className='start-container leftAlign'>
-                            <div >
+                        <div className='start-containerMobile leftAlign top5vh'>
+                            <div className='container5'>
                                 <IonItem>
                                 <IonLabel position="floating">Phone Number</IonLabel>
                                 <IonInput
@@ -180,7 +180,7 @@ const ContactUsDesktop = () => {
                                 </IonItem>
                                 <IonLabel color="danger">{phoneError}</IonLabel>
                             </div>
-                            <div className='margLeft5vh'>
+                            <div className='margLeft5vh container5'>
                                 <IonItem>
                                 <IonLabel position="floating">Message Title</IonLabel>
                                 <IonInput
@@ -192,7 +192,7 @@ const ContactUsDesktop = () => {
                                 <IonLabel color="danger">{messageTitleError}</IonLabel>
                             </div>
                         </div>
-                        <div className='start-container'>
+                        <div className='start-containerMobile top5vh'>
                             <div className='container5'>
                                 <IonItem className='full'>
                                     <IonLabel position="floating">Message</IonLabel>
@@ -202,6 +202,10 @@ const ContactUsDesktop = () => {
                                     ></IonTextarea>
                                 </IonItem>
                                 <IonLabel color="danger">{messageError}</IonLabel>
+                                <IonItem>
+                                    <IonCheckbox slot="start"></IonCheckbox>
+                                    <IonLabel>I agree with the data processing according to the <a href="/privacyPolicy">Privacy Policy</a></IonLabel>
+                                </IonItem>
                                 <div className='start-container rightAlign'>
                                     <CustomButton text="Send" email={email} className={'leftAlign'} onClick={()=>{
                                         sendMessage()

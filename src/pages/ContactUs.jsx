@@ -6,8 +6,10 @@ import { NavButtons } from '../components/NavButtons';
 import logo from '../images/logo.svg';
 import ContactUsDesktop from '../components/ContactUsDesktop';
 import ContactUsMobile from '../components/ContactUsMobile';
+import { useHistory } from "react-router-dom";
 
 const ContactUs = () => {
+    const history = useHistory()
     const [mQuery, setMQuery] = React.useState({
         matches: window.innerWidth > 768 ? true : false,
       });
@@ -22,7 +24,9 @@ const ContactUs = () => {
         <IonPage>
             <IonHeader>
                 <IonToolbar>
-                    <IonImg src={logo} className="logo"></IonImg>
+                <IonImg src={logo} className="logo" onClick={()=>{
+            history.replace('/home');
+          }}></IonImg>
                     <IonButtons slot="end">
                         <NavButtons/>
                     </IonButtons>
@@ -36,7 +40,7 @@ const ContactUs = () => {
                 ) : (
                 <>
                     <ContactUsDesktop/>
-                </>
+                </> 
                 )}
             </IonContent>
         </IonPage>
