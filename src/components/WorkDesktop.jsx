@@ -23,7 +23,7 @@ const WorkDesktop = () => {
             <h2 className="start-headline">Hello! We have<br></br> Design<br></br> Experience </h2>
             <p className="start-text">Hi there! I’m Bianca, a UX Designer creating<br></br>  brave interface designs that are beautiful and<br></br> enjoyable.</p>
             <div>
-              <IonButton size='small' fill='solid' shape='round' color="warning" onClick={()=>{history.push('/calculator')}}>LET'S TALK ABOUT YOUR PROJECT</IonButton>
+              <IonButton size='small' fill='solid' shape='round' color="warning" onClick={()=>{history.push('/contact')}}>LET'S TALK ABOUT YOUR PROJECT</IonButton>
             </div>
           </div>
           <div className='user-info-text margLeft5vh'>

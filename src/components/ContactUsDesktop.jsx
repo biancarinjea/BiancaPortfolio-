@@ -72,22 +72,17 @@ const ContactUsDesktop = () => {
     }
     return(
         <>
-           <div className='start-container top20vh'>
-                    <div className='container'>
-                        <div>
-                            <IonLabel className='contactUsTitle'>Get in touch with us!</IonLabel>
-                        </div>
-                        <div className='contactUsSubtitle top5vh'>
-                            <IonLabel>Hey! We are looking forward to start a<br></br> project with you !</IonLabel>
-                        </div>
-                        <div className='top5vh'>
-                            <CustomButton text="Contact Us" email={rightArrow} className={''}></CustomButton>
-                        </div>
-                    </div>
-                    <div className='container'>
-                        <IonImg src={contactUsImg}></IonImg>
-                    </div>
-                </div>
+            <div className='gradientBck'>
+                <IonLabel className='centerImg contactUsTitle'>Get in touch with us!</IonLabel>
+                <IonLabel className='contactUsText centerImg top5vh'>Hey! We are looking forward to start a project with you !</IonLabel>
+           </div>
+           <div className='contactUsTitle container1 top5vh margLeft5vh'>
+               <IonLabel>We are looking forward to hear from you !</IonLabel>
+           </div>
+           <div className='container1 contactUsText margLeft5vh'>
+               <IonLabel>After you have now scrolled through our page and read<br></br> about who we are, there is only one step left - to get in<br></br> touch.<br></br> 
+If you like us, you think we could form a good team, don't<br></br> hesitate to call, write or fill in the contact form at the<br></br> bottom of this page.</IonLabel>
+           </div>
                 <div>
                     <IonImg src={Wave}></IonImg>
                 </div>

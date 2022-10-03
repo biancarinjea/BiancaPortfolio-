@@ -1,0 +1,48 @@
+.containerArla{
+    width: 100%;
+}
+.containerArla1{
+    width: 20%;
+    height:300px
+}
+.containerArla2{
+    width: 20%;
+}
+.containerArla3{
+    width: 50%;
+}
+.arlaText{
+    font-family: 'Karma';
+    font-style: normal;
+    font-weight: 500;
+    font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+    line-height: 57px;
+    text-align: center;
+}
+.arlaText1{
+    font-family: 'Karma';
+    font-style: normal;
+    font-weight: 500;
+    font-size: clamp(1rem, 2vw, 2rem);
+    line-height: 57px;
+}
+.arlaTitle{
+    font-family: 'Khula';
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.arlaSubtitle{    
+    font-family: 'Khula';
+    font-style: normal;
+    line-height: 50px;
+    font-weight: 300;
+    font-size: clamp(0.5rem, 1.5vw, 1rem);
+}
+.personas{
+    width: 80%;
+}
+.textColorOrange{
+    color:#E29D1B;
+}

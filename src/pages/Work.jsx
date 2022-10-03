@@ -5,9 +5,10 @@ import { NavButtons } from '../components/NavButtons';
 import logo from '../images/logo.svg'
 import WorkDesktop from '../components/WorkDesktop';
 import WorkMobile from '../components/WorkMobile';
-
+import { useHistory } from "react-router-dom";
 
 const Work = () => {
+  const history = useHistory()
   const [mQuery, setMQuery] = React.useState({
     matches: window.innerWidth > 768 ? true : false,
   });
@@ -22,7 +23,9 @@ const Work = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonImg src={logo} className="logo"></IonImg>
+          <IonImg src={logo} className="logo" onClick={()=>{
+            history.replace('/home');
+          }}></IonImg>
           <IonButtons slot="end">
             <NavButtons/>
           </IonButtons>

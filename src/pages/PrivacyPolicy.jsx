@@ -2,13 +2,17 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar,IonButtons, IonImg
 import { NavButtons } from '../components/NavButtons';
 import './PrivacyPolicy.css';
 import logo from '../images/logo.svg'
+import { useHistory } from "react-router-dom";
 
 const PrivacyPolicy = () =>{
+    const history = useHistory()
     return(
         <IonPage>
             <IonHeader>
                 <IonToolbar>
-                <IonImg src={logo} className="logo"></IonImg>
+                <IonImg src={logo} className="logo" onClick={()=>{
+                    history.replace('/home');
+                }}></IonImg>
                 <IonButtons slot="end">
                     <NavButtons/>
                 </IonButtons>
