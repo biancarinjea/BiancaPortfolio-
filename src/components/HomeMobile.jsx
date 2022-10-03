@@ -40,10 +40,14 @@ We create websites and mobile applications</IonLabel>
             </div>
             <div className='start-container'>
                 <div>
-                    <CustomButton text="Let's Talk" email={email} className={''}></CustomButton>
+                    <CustomButton text="Let's Talk" email={email} className={''} onClick={()=>{
+                      history.push('/contact')
+                    }}></CustomButton>
                 </div>
                 <div>
-                    <CustomButton text="Portfolio" email={email} className={'butonul1'}></CustomButton>
+                    <CustomButton text="Portfolio" email={email} className={'butonul1'} onClick={()=>{
+                      history.push('/work')
+                    }}></CustomButton>
                 </div>
             </div>
             <div>
@@ -61,6 +65,8 @@ We create websites and mobile applications</IonLabel>
                         <IonLabel className='subtitleMobile1'>We are a native application development agency for<br></br> iOS and Android. We create complex applications<br></br> from scratch for your business.</IonLabel>
                     </div>
                 </div>
+             </div>
+             <div className='start-containerMobile top5vh'>
                 <div className='containerMobile'>
                     <div className='centerText'>
                         <IonLabel className='titleMobile1'>We develop the applications<br></br> you need</IonLabel>
@@ -69,6 +75,8 @@ We create websites and mobile applications</IonLabel>
                         <IonLabel className='subtitleMobile1'>We work closely with the client to create the desired applications,<br></br> both the mobile part (native IOS and android applications) and the<br></br> web design part (desktop/laptop and mobile browser), so that all<br></br> platforms are covered.</IonLabel>
                     </div>
                 </div>
+             </div>
+             <div className='start-containerMobile top5vh'>
                 <div className='containerMobile'>
                     <div className='centerText'>
                         <IonLabel className='titleMobile1'>UX and UI<br></br> services</IonLabel>
@@ -79,7 +87,9 @@ We create websites and mobile applications</IonLabel>
                 </div>
              </div>
              <div className='start-container top5vh'>
-                    <CustomButton text="Contact Us" email={rightArrow} className={''}></CustomButton>
+                    <CustomButton text="Contact Us" email={rightArrow} className={''} onClick={()=>{
+                      history.push('/contact')
+                    }}></CustomButton>
             </div>
             <div className='start-container top5vh'>
                 <IonLabel className='titleMobile1'>We offer the best advice and possible solutions to<br></br> any challenge!</IonLabel>
@@ -87,7 +97,7 @@ We create websites and mobile applications</IonLabel>
             <div className='start-containerMobile'>
           <div className='containerMobile1 bck'>
             <div className='centerImg'>
-              <IonImg src={Fantasy} className='imgMobile1   '></IonImg>
+              <IonImg src={Fantasy} className='imgMobile1'></IonImg>
             </div>
             <div className='centerText '>
               <IonLabel className='titleMobile1'>Modern design</IonLabel>
@@ -217,7 +227,9 @@ We create websites and mobile applications</IonLabel>
             </div>
           </div>
           <div className='start-container'>
-                    <IonButton size='small' fill='solid' shape='round' color="warning" className='btn'>See My Portfolio</IonButton>
+                    <IonButton size='small' fill='solid' shape='round' color="warning" className='btn' onClick={()=>{
+                      history.push('/work')
+                    }}>See My Portfolio</IonButton>
            </div>
            <div>
                 <IonImg src={HomeRectangle3}></IonImg>
@@ -236,11 +248,13 @@ We create websites and mobile applications</IonLabel>
 Use the form to contact us. We will try to answer as soon as possible. If your request is more urgent, you can also find us at phone<br></br> number +4556787678</IonLabel>
            </div>
            <div className='start-container  '>
-            <CustomButton text="Contact Us" email={rightArrow} className={''}></CustomButton>
+            <CustomButton text="Contact Us" email={rightArrow} className={''} onClick={()=>{
+              history.push('/contact')
+            }}></CustomButton>
            </div>
-           <div>
-            <IonImg src={HomeRectangle1} className='imgRectangle1'></IonImg>
-           </div>
+           <div className='start-containerMobile bottomBar'>
+            <IonLabel className='subtitleMobile1'>COPYRIGHT © DESIGN FUTURE BY RINJEA BIANCA. ALL RIGHTS RESERVED.</IonLabel>
+        </div>
         </>
     );
 }

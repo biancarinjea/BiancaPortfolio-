@@ -120,7 +120,7 @@ const HomeDesktop = () =>{
             <div className='centerText'>
               <IonLabel className='title1'>We develop the applications you need</IonLabel>
             </div>
-            <div className='centerText bck1'>
+            <div className='centerText bck1 top1vh margLeft1vh'>
               <IonLabel className='subtitle1'>We work closely with the client to create the desired applications,<br></br> both the mobile part (native IOS and android applications) and the<br></br> web design part (desktop/laptop and mobile browser), so that all<br></br> platforms are covered.</IonLabel>
             </div>
           </div>
@@ -134,7 +134,9 @@ const HomeDesktop = () =>{
           </div>
         </div>
         <div className='start-container'>
-          <CustomButton text="Contact Us" email={rightArrow} className={'centerText'}></CustomButton>
+          <CustomButton text="Contact Us" email={rightArrow} className={'centerText'} onClick={()=>{
+            history.push('/contact')
+          }}></CustomButton>
         </div>
         <div className='start-container top10vh'>
           <IonLabel className='title1'>We offer the best advice and possible<br></br> solutions to any challenge!</IonLabel>
@@ -294,7 +296,9 @@ Feel free to browse our online<br></br> portfolio.</IonLabel>
 Use the form to contact us. We will try to answer as soon as<br></br> possible. If your request is more urgent, you can also find us at<br></br> phone number +4556787678</IonLabel>
             </div>
             <div className='top5vh'>
-              <CustomButton text="Contact Us" email={rightArrow} className={''}></CustomButton>
+              <CustomButton text="Contact Us" email={rightArrow} className={''} onClick={()=>{
+                history.push('/contact')
+              }}></CustomButton>
             </div>
           </div>
           <div className='container'>
@@ -367,8 +371,8 @@ Use the form to contact us. We will try to answer as soon as<br></br> possible. 
             </div>
           </div>
         </div>
-        <div className='top20vh'>
-          <IonImg src={HomeRectangle1} className='imgRectangle1'></IonImg>
+        <div className='start-containerMobile bottomBar top20vh'>
+            <IonLabel>COPYRIGHT © DESIGN FUTURE BY RINJEA BIANCA. ALL RIGHTS RESERVED.</IonLabel>
         </div>
         </IonContent>
     )

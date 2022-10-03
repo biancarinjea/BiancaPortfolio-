@@ -39,9 +39,9 @@ We can arrange a meeting at our office to discuss in detail the project you want
           <div className='start-container  '>
             <CustomButton text="Contact Us" email={rightArrow} className={''}></CustomButton>
            </div>
-           <div className='top10vh scaleImg'>
-                <IonImg src={AboutUsRectangleBottom}></IonImg>
-            </div>
+           <div className='start-containerMobile bottomBar'>
+            <IonLabel className='subtitleMobile1'>COPYRIGHT © DESIGN FUTURE BY RINJEA BIANCA. ALL RIGHTS RESERVED.</IonLabel>
+        </div>
         </>
     );
 }

@@ -164,7 +164,7 @@ const Calculator = () => {
                         </div>
                     </div>
                 </div>
-                <div className='start-container'>
+                <div className='start-container top5vh'>
                     <div className='container' onClick={()=>{
                         const priceJson = JSON.stringify(posts[i]);
                         const price = JSON.parse(priceJson);

@@ -48,13 +48,13 @@ expectations</IonLabel>
                 </div>
             </div>
             <div className='top5vh'>
+                 <WorkCard userText="Team Project" toolsText="Design Thinking SCRUM" clockText="4 weeks" img={arla} onClick={arlaClicked}/>
+            </div>
+            <div className='top5vh'>
                  <WorkCard userText="Team Project" toolsText="Design Thinking" clockText="4 weeks" img={aarhus}/>
             </div>
             <div className='top5vh'>
                  <WorkCard userText="Team Project" toolsText="Design Thinking SCRUM" clockText="4 weeks" img={goWalk}/>
-            </div>
-            <div className='top5vh'>
-                 <WorkCard userText="Team Project" toolsText="Design Thinking SCRUM" clockText="4 weeks" img={arla} onClick={arlaClicked}/>
             </div>
             <div className='start-container'>
                 <div className='workSubtitle'>
@@ -63,12 +63,14 @@ expectations</IonLabel>
             </div>
             <div className='start-container'>
                 <div >
-                    <CustomButton text="Contact Us" email={rightArrow} className={''}></CustomButton>
+                    <CustomButton text="Contact Us" email={rightArrow} className={''} onClick={()=>{
+                        history.push('/contact')
+                    }}></CustomButton>
                 </div>
             </div>
-            <div className='top5vh'>
-                <IonImg src={HomeRectangle1} className='imgRectangle1'></IonImg>
-            </div>
+            <div className='start-containerMobile bottomBar'>
+            <IonLabel className='subtitleMobile1'>COPYRIGHT © DESIGN FUTURE BY RINJEA BIANCA. ALL RIGHTS RESERVED.</IonLabel>
+        </div>
         </>
     );
 }

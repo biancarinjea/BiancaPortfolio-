@@ -178,8 +178,8 @@ const AboutUsDesktop = () =>{
             </div>
           </div>
         </div>
-        <div className='top10vh scaleImg'>
-           <IonImg src={AboutUsRectangleBottom}></IonImg>
+        <div className='start-containerMobile bottomBar'>
+            <IonLabel>COPYRIGHT © DESIGN FUTURE BY RINJEA BIANCA. ALL RIGHTS RESERVED.</IonLabel>
         </div>
         </>
     );

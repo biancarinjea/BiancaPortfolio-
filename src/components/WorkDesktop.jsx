@@ -41,14 +41,15 @@ const WorkDesktop = () => {
 expectations</p>
         </div>
         <div>
+          <WorkCard userText="Team Project" toolsText="Design Thinking, SCRUM" clockText="4 weeks" img={arla} onClick={arlaClicked}/>
+        </div>
+        <div>
           <WorkCard userText="Team Project" toolsText="Design Thinking" clockText="4 weeks" img={aarhus}/>
         </div>
         <div>
           <WorkCard userText="Team Project" toolsText="Design Thinking, SCRUM" clockText="4 weeks" img={goWalk}/>
         </div>
-        <div>
-          <WorkCard userText="Team Project" toolsText="Design Thinking, SCRUM" clockText="4 weeks" img={arla} onClick={arlaClicked}/>
-        </div>
+        
         <div className='start-container'>
           <div className='workSubtitle'>
             <IonLabel>Get In Touch! Thank you for your visit I hope I will see you soon</IonLabel>
@@ -56,11 +57,13 @@ expectations</p>
         </div>
         <div className='start-container'>
           <div className='top5vh'>
-              <CustomButton text="Contact Us" email={rightArrow} className={''}></CustomButton>
+              <CustomButton text="Contact Us" email={rightArrow} className={''} onClick={()=>{
+                history.push('/contact')
+              }}></CustomButton>
           </div>
         </div>
-        <div className='top10vh'>
-          <IonImg src={HomeRectangle1} className='imgRectangle1'></IonImg>
+        <div className='start-containerMobile bottomBar'>
+            <IonLabel>COPYRIGHT © DESIGN FUTURE BY RINJEA BIANCA. ALL RIGHTS RESERVED.</IonLabel>
         </div>
         </>
     );

@@ -7,13 +7,13 @@
 }
 .start-headlineMobile {
     font-family: PermanentMarker, sans-serif;
-    font-size:clamp(0.5rem,2.6vw,2rem);
+    font-size:clamp(1rem,2.6vw,2rem);
     color: var( --ion-color-primary-text);
     text-align: center;
 }
 .start-textMobile{
     font-family: Open Sans, sans-serif;
-    font-size: clamp(0.1rem,2vw,1rem);
+    font-size: clamp(0.3rem,2.4vw,1rem);
     color: var( --ion-color-primary-text);
     padding: 1em 0;
     text-align: center;
@@ -37,20 +37,26 @@
     font-family: 'Khula';
     font-style: normal;
     font-weight: 600;
-    font-size:2vw !important;
+    font-size:4vw !important;
     text-align: center;
 }
 .subtitleMobile1{
     font-family: 'Khula';
     font-style: normal;
     font-weight: 300;
-    font-size: 1vw !important;
+    font-size: 2vw !important;
     text-align: center;
 }
 .containerMobile{
-    width: 40%;
+    width: 100vh;
+    padding:2vh;
 }
 .containerMobile1{
-    width: 40%;
-    padding: 20px;
+    width: 50%;
+}
+.bckMobile{
+    border-radius: 8px 100px / 100px 30px;
+    border-width:thin;
+    border-color: #E7C9A7;
+    border-style: solid;
 }

@@ -86,9 +86,7 @@ const ContactUsMobile = () => {
              <div className='start-container'>
                 <IonImg src={contactUsImg} className='imgMobile'></IonImg>
              </div>
-             <div className='start-container'>
-                <CustomButton text="Contact Us" email={rightArrow} className={''}></CustomButton>
-             </div>
+            
              <div>
                 <IonImg src={Wave}></IonImg>
              </div>
@@ -207,6 +205,9 @@ If your request is more urgent, you can also find us at phone number +4556787678
                         sendMessage()
                     }}></CustomButton>
             </div>
+            <div className='start-containerMobile bottomBar'>
+            <IonLabel className='subtitleMobile1'>COPYRIGHT © DESIGN FUTURE BY RINJEA BIANCA. ALL RIGHTS RESERVED.</IonLabel>
+        </div>
         </>
     );
 }

@@ -28,7 +28,7 @@ export const Menu = () => {
             </IonMenuToggle>
             <IonMenuToggle auto-hide="false">
               <IonItem button routerLink={"/work"} routerDirection="none">
-                <IonLabel>Work</IonLabel>
+                <IonLabel>Portfolio</IonLabel>
               </IonItem>
               <IonItem button routerLink={"/aboutUs"} routerDirection="none">
                 <IonLabel>About Us</IonLabel>

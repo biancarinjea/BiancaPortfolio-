@@ -77,3 +77,10 @@
 .centerAlignText{
     text-align: center;
 }
+.iconDesktop{
+    width: 10px;
+    height: 10px;
+}
+.bottomBar{
+    background-image: url('../images//HomeRectangle1.svg');
+}
